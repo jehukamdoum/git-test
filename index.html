@@ -1,0 +1,143 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header>
+        <div>
+            <h2>EMS Portal</h2>
+        </div>
+
+        <nav>
+            <a href="#">Dashboard</a>
+            <a href="#">Employees</a>
+            <a href="#">Departments</a>
+            <a href="#">Attendance</a>
+            <a href="#">Reports</a>
+        </nav>
+
+        <div>
+            <span>Welcome, Admin</span>
+        </div>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div>
+
+        <!-- SIDEBAR -->
+        <aside>
+            <ul>
+                <li>Dashboard</li>
+                <li>Employees</li>
+                <li>Departments</li>
+                <li>Attendance</li>
+                <li>Performance</li>
+                <li>Settings</li>
+            </ul>
+        </aside>
+
+        <!-- CONTENT -->
+        <main>
+
+            <section>
+                <h1>Dashboard</h1>
+                <p>Overview of company activities.</p>
+            </section>
+
+            <!-- KPI CARDS -->
+            <section class="cards">
+
+
+                <div>
+                    <h3>Total Employees</h3>
+                    <p>250</p>
+                </div>
+
+                <div>
+                    <h3>Departments</h3>
+                    <p>12</p>
+                </div>
+
+                <div>
+                    <h3>Present Today</h3>
+                    <p>230</p>
+                </div>
+
+                <div>
+                    <h3>Absent Today</h3>
+                    <p>20</p>
+                </div>
+
+            </section>
+
+            <!-- EMPLOYEE TABLE -->
+            <section>
+
+                <h2>Recent Employees</h2>
+                 <button id="addEmployeeBtn" type="button">
+                    Add Employee
+                 </button>
+                 <div id="employeeForm" style="display: none;">
+
+    <h3>Add Employee</h3>
+
+    <input id="nameInput" type="text" placeholder="Employee Name">
+    <br><br>
+
+    <input id="emailInput" type="email" placeholder="Email">
+    <br><br>
+
+    <input id="departmentInput" type="text" placeholder="Department">
+    <br><br>
+<button type="button" id="saveBtn">Save</button>
+<button type="button" id="cancelBtn">Cancel</button>
+    </div>
+
+                <table border="1">
+
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Department</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="employeeTableBody">
+
+                        <tr>
+                            <td>1</td>
+                            <td>John Smith</td>
+                            <td>IT</td>
+                            <td>john@email.com</td>
+                            <td>Active</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td>Mary Johnson</td>
+                            <td>HR</td>
+                            <td>mary@email.com</td>
+                            <td>Active</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </section>
+
+        </main>
+
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
+ 
