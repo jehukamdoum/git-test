@@ -86,13 +86,13 @@
 
     <h3>Add Employee</h3>
 
-    <input id="nameInput" type="text" placeholder="Employee Name">
+    <input id="nameInput" type="text" placeholder="Employee Name" required>
     <br><br>
 
-    <input id="emailInput" type="email" placeholder="Email">
+    <input id="emailInput" type="email" placeholder="Email" required>
     <br><br>
 
-    <input id="departmentInput" type="text" placeholder="Department">
+    <input id="departmentInput" type="text" placeholder="Department" required>
     <br><br>
 <button type="button" id="saveBtn">Save</button>
 <button type="button" id="cancelBtn">Cancel</button>
@@ -102,11 +102,12 @@
 
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Department</th>
-                            <th>Email</th>
-                            <th>Status</th>
+                          <th>ID</th>
+                          <th>Name</th>
+                          <th>Department</th>
+                          <th>Email</th>
+                          <th>Status</th>
+                          <th>Actions</th>
                         </tr>
                     </thead>
 
@@ -118,6 +119,7 @@
                             <td>IT</td>
                             <td>john@email.com</td>
                             <td>Active</td>
+                            <td><button class="deleteBtn">Delete</button></td>
                         </tr>
 
                         <tr>
@@ -126,6 +128,7 @@
                             <td>HR</td>
                             <td>mary@email.com</td>
                             <td>Active</td>
+                            <td><button class="deleteBtn">Delete</button></td>
                         </tr>
 
                     </tbody>

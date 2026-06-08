@@ -12,6 +12,15 @@ cancelBtn.addEventListener("click", function () {
 const saveBtn = document.getElementById("saveBtn");
 const tableBody = document.getElementById("employeeTableBody");
 
+tableBody.addEventListener("click", function (event) {
+    if (event.target.matches(".deleteBtn")) {
+        const row = event.target.closest("tr");
+        if (row) {
+            row.remove();
+        }
+    }
+});
+
 saveBtn.addEventListener("click", function () {
 
     const name = document.getElementById("nameInput").value;
@@ -27,8 +36,8 @@ saveBtn.addEventListener("click", function () {
         <td>${department}</td>
         <td>${email}</td>
         <td>Active</td>
+        <td><button class="deleteBtn">Delete</button></td>
     `;
-
     tableBody.appendChild(newRow);
 
     document.getElementById("nameInput").value = "";
@@ -37,4 +46,3 @@ saveBtn.addEventListener("click", function () {
 
     form.style.display = "none";
 });
-localStorage.setItem("employees", JSON.stringify(employees));
